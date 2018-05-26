@@ -5,4 +5,4 @@
 * [css](/css)
   * [css 实现宽高等比例自适应矩形](/css/ratio-rectangle.html)
 * [js](/javascript)
-  * [proxy 可以用来干什么](/js/proxy)
+  * [proxy 可以用来干什么](/js/proxy/index.js)
