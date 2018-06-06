@@ -22,3 +22,32 @@ console.log(target);
   console.log('z' in proxy.x.y);
   console.log(target.x.y.z);
 })()
+
+class Test {
+  constructor(a, b) {
+    console.log('constructor', a, b);
+  }
+}
+
+// Test(1, 2);
+
+let proxyClass = new Proxy(Test, {
+  apply(target, thisArg, argumentsList) {
+    return new(target.bind(thisArg, ...argumentsList))();
+  }
+})
+
+// proxyClass(1, 3)
+
+function add(a, b) {
+  return a + b;
+}
+
+let proxytest = new Proxy(add, {
+  construct(target, argumentsList, newTarget) {
+    throw new Error(`Function ${target.name} cannot be invoked with new `)
+  }
+})
+
+proxytest(1, 2)
+new proxytest(1, 2)
