@@ -4,6 +4,7 @@
 
 - [css](/css)
   - [css 实现宽高等比例自适应矩形](/css/ratio-rectangle.html)
+  - [css 实现滚动吸顶效果](/css/sticky.html)
 - [js](/javascript)
   - [proxy 可以用来干什么](/javascript/proxy/index.js)
 - [react](/react)
