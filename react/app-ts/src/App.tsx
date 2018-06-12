@@ -1,7 +1,8 @@
 import * as React from 'react';
 import './App.css';
+import Immutable from './components/Immutable';
 
-class App extends React.Component {
+class App extends React.PureComponent {
   public state = {
     time: new Date().toLocaleTimeString(),
   };
@@ -22,6 +23,7 @@ class App extends React.Component {
         <div>
           <h1>Hello World</h1>
           <h2>It is {time}</h2>
+          <Immutable />
         </div>
       </div>
     );
