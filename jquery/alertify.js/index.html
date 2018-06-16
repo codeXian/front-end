@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>alertify</title>
+  <link rel="stylesheet" href="./alertify.js-0.3.11/themes/alertify.core.css">
+  <link rel="stylesheet" href="./alertify.js-0.3.11/themes/alertify.default.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <button id="btn">点击</button>
+    <button id="close">关闭</button>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"></script>
+  <script src="./alertify.js-0.3.11/src/alertify.js"></script>
+  <script>
+    $('#btn').on('click', function () {
+      // alertify.alert('Hello world')
+      // alertify.confirm('Message', function (e) {
+      //   console.log(e);
+      // })
+      // alertify.success('Success notification')
+      alertify.set({
+        delay: 10000
+      })
+      var value = alertify.log('notification')
+    })
+    $('#close').on('click', function () {
+      $('#alertify-logs').empty().addClass('alertify-logs-hidden');
+      alertify.set({
+        delay: 1000
+      })
+      alertify.log('请求接口成功')
+    })
+  </script>
+</body>
+
+</html>
