@@ -9,3 +9,5 @@
   - [proxy 可以用来干什么](/javascript/proxy/index.js)
 - [react](/react)
   - [typescript 版本](/react/app-ts/README.md)
+- [jquery](/jquery)
+  - [alertify.js](/jquery/alertify.js/index.html)
